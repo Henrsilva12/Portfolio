@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #00072d;
+    align-items: center;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  
+  h1 span {
+    color: aqua;
+    font-weight: bold;
+  }
+  

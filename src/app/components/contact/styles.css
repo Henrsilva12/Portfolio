@@ -1,0 +1,121 @@
+.section_form {
+  display: flex;
+  justify-content:space-between ;
+  background-color: #F6FCFF;
+  padding: 24px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 290px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+label {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00072D;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+label span {
+  color: red;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #0A2472;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 400px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.button {
+  padding: 12px;
+  background-color: #0A2472;
+  color: white;
+  border: none;
+  width: 200px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.button:hover {
+  background-color: #06143F;
+}
+
+.section_formContact {
+  padding: 20px;
+  text-align: center;
+}
+
+.section_formContact h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00072D;
+  text-align: left;
+  margin-left: -45px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  margin-bottom: 12px;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #00072D;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  color: #254bd3;
+}
+
+.contact-icon {
+  font-size: 30px;
+  color: #003f7d;
+  margin-right: 10px;
+}
+
+.contact-iconWhatsapp {
+  font-size: 32px;
+  margin-right: 10px;
+  color: #25d366;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-icon {
+  font-size: 32px;
+  color: #003f7d;
+  transition: color 0.2s;
+}
+
+.social-icon:hover {
+  color: #0070f3;
+} 

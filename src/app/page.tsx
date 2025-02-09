@@ -1,95 +1,128 @@
+
+import React from "react";
+import Contact from "./components/contact";
+import Timeline from "./components/experience";
+import Navbar from "./components/navbar";
+import ProfileImage from "./components/profile";
+import Footer from "./components/footer";
 import Image from "next/image";
-import styles from "./page.module.css";
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container">
+      <Navbar />
+      <div className="header-section">
+        <div className="titles-photo">
+          <div className="titles">
+            <h1>Olá! Me chamo</h1>
+            <h2>Henrique Santos</h2>
+            <h3>UI & UX</h3>
+            <h4>Designer</h4>
+          </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          <div className="photo">
+            <ProfileImage
+              src="imagens/foto.svg"
+              alt="foto"
+              width={500}
+              height={500} githubUrl={undefined} linkedinUrl={undefined}/>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="description">
+          <p>
+            Profissional com 2 anos de experiência em gestão de projetos ágeis,
+            atuando <br /> como Scrum Master e Product Owner. Especialista em
+            liderar times internacionais,
+            <br />
+            criar protótipos UI/UX no Figma e impulsionar resultados estratégicos
+            com Scrum e Kanban.
+          </p>
+      </div>
     </div>
+      <div className="section-experience">
+          <h1>Minhas Experiências</h1>
+          <Timeline />
+      </div>
+
+        <div className="section-projects">
+          <h1>Meus Projetos</h1>
+          <p>
+            Exploro criatividade e funcionalidade em cada projeto que desenvolvo.
+            Aqui estão algumas <br /> iniciativas que destacam minha experiência em UI/UX
+            design, gestão de projetos ágeis e <br /> desenvolvimento de soluções
+            inovadoras.
+          </p>
+        </div>
+        <div className="carrossel">
+
+        </div>
+
+      <div className="section-skills">
+          <h1>Minhas Skills</h1>
+          <p>
+          Transformo ideias em interfaces incríveis com Figma, organizo projetos
+          com <br /> ClickUp e Trello, e adiciono valor ao front-end com habilidades em
+          React.
+          </p>
+            <div className="skills-container">
+              <div className="figma">
+              <Image
+              src="/imagens/figma.svg"
+              alt="figma"
+              width={60}
+              height={115}
+            />
+            <p>Figma</p>
+              </div>
+
+              <div className="react">
+                <Image
+                src="/imagens/react.svg"
+                alt="figma"
+                width={60}
+                height={115}
+              />
+              <p>React</p>
+              </div>
+              
+            <div className="trello">
+              <Image
+                src="/imagens/Trello.svg"
+                alt="figma"
+                width={60}
+                height={115}
+              />
+              <p>Trello</p>
+            </div>
+
+            <div className="clickup">
+            <Image
+              src="imagens/Clickup.svg"
+              alt="figma"
+              width={60}
+              height={115}
+            />
+            <p>ClickUp</p>
+            </div>
+          </div>
+      </div>
+
+      <div className="section-contact">
+          <h1>Contate me</h1>
+          <p>
+          Ficarei feliz em conversar sobre projetos e oportunidades. <br /> Entre em
+          contato!
+        </p>
+            <Contact />
+      </div>
+
+      <div className="footer">
+        <Footer />
+      </div>
+      
+    </div>
+
   );
 }
