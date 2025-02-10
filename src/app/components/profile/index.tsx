@@ -17,7 +17,7 @@ const ProfileImage = ({ src, alt, width, height, githubUrl, linkedinUrl }) => {
 
       <div className="socialIcons">
         <a
-          href="https://github.com/Henrsilva12"
+          href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="icon"
@@ -26,7 +26,7 @@ const ProfileImage = ({ src, alt, width, height, githubUrl, linkedinUrl }) => {
           <FaGithub size={30} />
         </a>
         <a
-          href="https://www.linkedin.com/in/henrique-santos-4b7901287"
+          href={linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="icon"

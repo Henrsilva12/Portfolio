@@ -30,7 +30,7 @@ export default function Home() {
               src="imagens/foto.svg"
               alt="foto"
               width={500}
-              height={500} githubUrl={undefined} linkedinUrl={undefined}/>
+              height={500} githubUrl="https://github.com/Henrsilva12" linkedinUrl="https://www.linkedin.com/in/henrique-santos-4b7901287"/>
           </div>
         </div>
 
