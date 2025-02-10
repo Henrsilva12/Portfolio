@@ -1,4 +1,3 @@
-// /api/sendEmail.js
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
@@ -20,13 +19,12 @@ export default async function handler(req, res) {
       subject: `Mensagem de ${name} - Portfólio`,
       text: message,
     };
-
     try {
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: "Email enviado com sucesso!" });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      res.status(500).json({ message: "Erro ao enviar o email!" });
+      console.error("Erro ao enviar o e-mail:", error); // Log mais detalhado
+      res.status(500).json({ message: "Erro ao enviar o email!", error: error.message });
     }
   } else {
     res.status(405).json({ message: "Método não permitido!" });
