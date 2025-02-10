@@ -18,9 +18,24 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    const data = await response.json();
+  
+    if (response.ok) {
+      alert("E-mail enviado com sucesso!");
+    } else {
+      alert(data.message || "Erro ao enviar e-mail.");
+    }
   };
 
   return (
