@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     try {
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: "Email enviado com sucesso!" });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       res.status(500).json({ message: "Erro ao enviar o email!" });
     }
