@@ -20,30 +20,30 @@ const Form = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
+  
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
-       const data = await response.json();
   
-    if (response.ok) {
-      alert("E-mail enviado com sucesso!");
-    } else {
-      alert(data.message || "Erro ao enviar e-mail.");
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("E-mail enviado com sucesso!");
+        setFormData({ name: '', email: '', message: '' });  // Limpa o formulário após envio
+      } else {
+        alert(data.error || "Erro ao enviar e-mail.");
+      }
+    } catch (error) {
+      alert("Erro de conexão. Tente novamente mais tarde.");
+      console.error("Erro:", error);
     }
-  } catch (error) {
-    alert("Erro de conexão. Tente novamente mais tarde.");
-    console.error(error);  // Para debug, pode ser removido depois
-  }
-
- };
-
+  };
+  
   return (
     <div className="section_form">
       <form onSubmit={handleSubmit}>
