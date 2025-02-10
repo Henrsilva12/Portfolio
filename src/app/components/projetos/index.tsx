@@ -41,7 +41,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <div id="projects" className="section_projects">
+        <div className="section_projects">
             <div className="project_Eat">
                 <Swiper
                     slidesPerView={slidePerView}

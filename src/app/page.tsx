@@ -7,6 +7,7 @@ import ProfileImage from "./components/profile";
 import Footer from "./components/footer";
 import Image from "next/image";
 import Projects from "./components/projetos";
+import ScrollButton from "./components/button";
 
 
 export default function Home() {
@@ -128,6 +129,9 @@ export default function Home() {
       <div className="footer">
         <Footer />
       </div>
+
+      {/* Scroll Button */}
+      <ScrollButton />
     </div>
   );
 }

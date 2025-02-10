@@ -28,13 +28,6 @@ const Navbar: React.FC = () => {
         <Image src="/imagens/logo1.svg" alt="logo" width={34} height={43} />
       </div>
 
-      {/* Email */}
-      <div className="email">
-        <a href="mailto:henrsilvasantos@gmail.com" className="email-link">
-          henrsilvasantos@gmail.com
-        </a>
-      </div>
-
       {/* Links de navegação */}
       <ul className="nav-links">
         {sections.map((section) => (
