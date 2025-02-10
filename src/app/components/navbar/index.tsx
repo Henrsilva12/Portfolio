@@ -5,7 +5,7 @@ import Image from "next/image";
 import "./styles.css";
 
 const Navbar: React.FC = () => {
-  // Lista de seções da navbar com seus respectivos IDs e rótulos
+
   const sections = [
     { id: "home", label: "Home" },
     { id: "experiencias", label: "Experiências" },
@@ -14,7 +14,6 @@ const Navbar: React.FC = () => {
     { id: "contato", label: "Contato" },
   ];
 
-  // Função para rolar suavemente até uma seção específica
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -26,7 +25,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">
-        <Image src="imagens/logo1.svg" alt="logo" width={34} height={43} />
+        <Image src="/imagens/logo1.svg" alt="logo" width={34} height={43} />
       </div>
 
       {/* Email */}
@@ -37,10 +36,11 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Links de navegação */}
-      <ul>
+      <ul className="nav-links">
         {sections.map((section) => (
           <li key={section.id}>
-            <button onClick={() => scrollToSection(section.id)}>
+            <button type="button" className="nav-buton" onClick={() => scrollToSection(section.id)}
+              aria-label={`Ir para a seção ${section.label}`}>
               {section.label}
             </button>
           </li>

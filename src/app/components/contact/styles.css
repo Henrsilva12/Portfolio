@@ -72,7 +72,6 @@ textarea {
 }
 
 .contact-item {
-  display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px 0;
@@ -99,8 +98,8 @@ textarea {
 }
 
 .contact-iconWhatsapp {
-  font-size: 32px;
-  margin-right: 10px;
+  font-size: 30px;
+  margin-right: 8px;
   color: #25d366;
 }
 

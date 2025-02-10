@@ -38,12 +38,13 @@ body {
   gap: 300px;
 }
 
-h1 {
+.titles h1 {
   font-size: 30px;
   font-weight: bold;
   padding-top: 20px;
-  padding-left: 40px;
+  padding-left: 20px;
   margin-bottom: 5px;
+  color: #000000;
 }
 
 h2 {
@@ -51,7 +52,7 @@ h2 {
   font-weight: bold;
   color: #00194d;
   margin: 0;
-  padding: 5px 0 0 100px; /* Aproxima do h3 */
+  padding: 5px 0 0 270px; /* Aproxima do h3 */
 }
 
 h3 {
@@ -120,8 +121,8 @@ p {
 .section-projects h1{
   font-size: 50px;
   font-weight: bold;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 0;
   justify-content: center;
   color: #3e89b9;
 }
@@ -132,10 +133,12 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 850px;
 }
 
 .section-projects p{
   text-align: center;
+  padding-top: -40px;
 }
 
 .fundo-section {
@@ -145,8 +148,7 @@ p {
 .section-skills h1{
   font-size: 50px;
   font-weight: bold;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 10px;
   justify-content: center;
   color: #3e89b9;
 }

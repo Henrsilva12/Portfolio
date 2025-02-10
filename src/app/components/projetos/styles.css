@@ -1,0 +1,75 @@
+.section_projects {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.slide-item{
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide-content{
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: #B8E7FB;
+  border-radius: 10px;
+  padding-top: 15px;
+}
+
+.slide-info{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: black;
+  text-align: center;
+}
+
+.slide-info h2{
+  display: flex;
+  margin: 0 -50px 0 ;
+  font-size: 1.5rem;
+  color: #0E6BA8;
+}
+
+.slide-info p{
+  margin: -10px 0 0;
+  font-size: 1rem;
+}
+
+.doe-slide .slide-content {
+  border: 10px solid #B8E7FB;
+  width: 600px;
+  height: 490px;
+}
+
+.doe-slide .slide-info {
+  text-align: center;
+  padding-left: 40px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-swiper .swiper-pagination {
+  position: relative;
+  bottom: 20px;
+  padding: 10px;
+  left: 0;
+  text-align: center;
+}
+
+.doe-slide ~ .swiper-pagination {
+  bottom: 0; /* ou ajuste conforme a necessidade */
+}
+
+a {
+  text-decoration: none;
+  color: #0E6BA8; /* Mesma cor do título */
+}

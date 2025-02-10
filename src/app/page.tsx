@@ -6,13 +6,16 @@ import Navbar from "./components/navbar";
 import ProfileImage from "./components/profile";
 import Footer from "./components/footer";
 import Image from "next/image";
+import Projects from "./components/projetos";
 
 
 export default function Home() {
   return (
     <div className="container">
       <Navbar />
-      <div className="header-section">
+
+      {/* Seção Home */}
+      <section id="home" className="header-section">
         <div className="titles-photo">
           <div className="titles">
             <h1>Olá! Me chamo</h1>
@@ -40,13 +43,16 @@ export default function Home() {
             com Scrum e Kanban.
           </p>
       </div>
-    </div>
-      <div className="section-experience">
+    </section>
+
+      {/* Seção Experiências */}
+      <section id="experiencias" className="section-experience">
           <h1>Minhas Experiências</h1>
           <Timeline />
-      </div>
+      </section>
 
-        <div className="section-projects">
+        {/* Seção Projetos */}
+        <section id="projetos" className="section-projects">
           <h1>Meus Projetos</h1>
           <p>
             Exploro criatividade e funcionalidade em cada projeto que desenvolvo.
@@ -54,12 +60,11 @@ export default function Home() {
             design, gestão de projetos ágeis e <br /> desenvolvimento de soluções
             inovadoras.
           </p>
-        </div>
-        <div className="carrossel">
+          <Projects />
+      </section>
 
-        </div>
-
-      <div className="section-skills">
+      {/* Seção Skills */}
+      <section id="skills" className="section-skills">
           <h1>Minhas Skills</h1>
           <p>
           Transformo ideias em interfaces incríveis com Figma, organizo projetos
@@ -107,22 +112,22 @@ export default function Home() {
             <p>ClickUp</p>
             </div>
           </div>
-      </div>
+      </section>
 
-      <div className="section-contact">
+      {/* Seção Contato */}
+      <section id="contato" className="section-contact">
           <h1>Contate me</h1>
           <p>
           Ficarei feliz em conversar sobre projetos e oportunidades. <br /> Entre em
           contato!
         </p>
             <Contact />
-      </div>
+      </section>
 
+      {/* Footer */}
       <div className="footer">
         <Footer />
       </div>
-      
     </div>
-
   );
 }
