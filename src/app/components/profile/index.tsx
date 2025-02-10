@@ -3,7 +3,22 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import PropTypes from "prop-types";
 import "./styles.css";
 
-const ProfileImage = ({ src, alt, width, height, githubUrl, linkedinUrl }) => {
+interface ProfileImageProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  githubUrl: string;
+  linkedinUrl: string;
+}
+const ProfileImage: React.FC<ProfileImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  githubUrl,
+  linkedinUrl,
+}) => {
   return (
     <div className="profileWrapper">
       <div className="profileImageContainer">
