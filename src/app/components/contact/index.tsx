@@ -18,11 +18,32 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+  
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("E-mail enviado com sucesso!");
+        setFormData({ name: '', email: '', message: '' });  // Limpa o formulário após envio
+      } else {
+        alert(data.error || "Erro ao enviar e-mail.");
+      }
+    } catch (error) {
+      alert("Erro de conexão. Tente novamente mais tarde.");
+      console.error("Erro:", error);
+    }
   };
-
+  
   return (
     <div className="section_form">
       <form onSubmit={handleSubmit}>

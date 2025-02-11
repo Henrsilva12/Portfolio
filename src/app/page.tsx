@@ -19,7 +19,7 @@ export default function Home() {
       <section id="home" className="header-section">
         <div className="titles-photo">
           <div className="titles">
-            <h1>Olá! Me chamo</h1>
+            <h1>Olá! Me chamoTeste</h1>
             <h2>Henrique Santos</h2>
             <h3>UI & UX</h3>
             <h4>Designer</h4>
@@ -105,7 +105,7 @@ export default function Home() {
 
             <div className="clickup">
             <Image
-              src="imagens/Clickup.svg"
+              src="/imagens/Clickup.svg"
               alt="figma"
               width={60}
               height={115}
