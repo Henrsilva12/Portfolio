@@ -19,7 +19,7 @@ const Projects = () => {
         { id: '2', image: '/imagens/Enviei.png', url: 'https://www.figma.com/design/4vsABWc6YzGThVfMBhRK9Z/EmailService?node-id=1173-919&p=f&t=TvxhLmZGvjGeKWoF-0', title: 'E-mail Service', description: 'Aplicação para envio de e-mails transacionais'},
         { id: '3', image: '/imagens/KeySafe.png', url: 'https://www.figma.com/design/KaEllRGbIjSJkzjTyANa3V/Desenvolvimento-Mobile?node-id=0-1&t=DS8DaOSZ0OdahLYh-1', title: 'KeySafe', description: 'Gerenciador de senhas mobile com segurança avançada'},
         { id: '4', image: '/imagens/Doe+.png', url: 'https://www.figma.com/design/mITxJzKIUyKd4E2JEa1bCu/PCE-2?node-id=722-3221&t=9HqXkY6NJLpszeFy-1', title: 'Doe+', description: 'Aplicativo de doações para instituições sem fins lucrativos'},
-        { id: '5', image: '/imagens/Poster.png', url: 'https://www.figma.com/design/EQv7ACTqoMs52VlvqPgQ0f/Freelas?node-id=0-1&t=AAbJxlqNSk9vr7iY-1', title: 'Poster Design', description: 'Design de pôsteres e material gráfico'},
+        { id: '5', image: '/imagens/Poster.png', url: 'https://www.figma.com/design/EQv7ACTqoMs52VlvqPgQ0f/Freelas?node-id=0-1&t=AAbJxlqNSk9vr7iY-1', title: 'Designer do Geni', description: 'Designer do núcleo de estudos de gênero e sexualidade'},
     ]
 
     useEffect(() => {
