@@ -10,21 +10,23 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Todos os campos são obrigatórios!" }, { status: 400 });
   }
 
+  // Configuração do Mailtrap
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "sandbox.smtp.mailtrap.io", // Servidor SMTP do Mailtrap
+    port: 2525, // Porta do Mailtrap
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
+      user: "e036a0c5b0fd4b", // Seu usuário do Mailtrap
+      pass: "29e21d8c123f1e", // Sua senha do Mailtrap
     },
   });
 
   try {
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: "henrsilvasantos@gmail.com",
-      subject: `Nova mensagem de ${name}`,
-      text: message,
-      replyTo: email,
+      from: `"${name}" <${email}>`, // Remetente
+      to: "henrsilvasantos@gmail.com", // Destinatário
+      subject: `Nova mensagem de ${name}`, // Assunto
+      text: message, // Corpo do e-mail em texto simples
+      replyTo: email, // Endereço de resposta
     });
 
     return NextResponse.json({ message: "Email enviado com sucesso!" }, { status: 200 });
