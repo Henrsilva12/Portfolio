@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 0px;
+    
   }
   
   .timeline-item {
@@ -64,14 +65,13 @@
   
   .right h3 {
     font-size: 30px;
-    margin: 1px;
     color: #49494a;
   }
   
   .right p {
     font-size: 1rem;
     color: #98a2b3;
-    padding-left: 37px;
+    padding-left: 1px;
     padding-top: -10px;
   }
   
