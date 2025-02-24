@@ -20,6 +20,12 @@
     padding-left: 30px;
   }
 
+  
+  .right {
+  text-align: left; /* Alinhar texto à esquerda */
+    padding-left: -20px; /* Adicionar espaçamento à esquerda */
+}
+
   .left h3 {
     font-size: 30px;
     margin: 10px;
@@ -72,6 +78,6 @@
     font-size: 1rem;
     color: #98a2b3;
     padding-left: 1px;
-    padding-top: -10px;
+    margin-right: 40px;  
   }
   
