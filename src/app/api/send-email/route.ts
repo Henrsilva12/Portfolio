@@ -9,7 +9,17 @@ export async function POST(req: Request) {
   if (!name || !email || !message) {
     return NextResponse.json({ error: "Todos os campos são obrigatórios!" }, { status: 400 });
   }
-
+/*
+  // Configuração do Mailtrap
+  const transporter = nodemailer.createTransport({
+    host: "sandbox.smtp.mailtrap.io", // Servidor SMTP do Mailtrap
+    port: 2525, // Porta do Mailtrap
+    auth: {
+      user: "e036a0c5b0fd4b", // Seu usuário do Mailtrap
+      pass: "29e21d8c123f1e", // Sua senha do Mailtrap
+    },
+  });
+*/
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
