@@ -105,7 +105,7 @@ export default function Home() {
 
             <div className="clickup">
             <Image
-              src="/imagens/Clickup.svg"
+              src="/imagens/clickup.svg"
               alt="clickup"
               width={60}
               height={115}
