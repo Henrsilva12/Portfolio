@@ -86,7 +86,7 @@ export default function Home() {
               <div className="react">
                 <Image
                 src="/imagens/react.svg"
-                alt="figma"
+                alt="react"
                 width={60}
                 height={115}
               />
@@ -96,7 +96,7 @@ export default function Home() {
             <div className="trello">
               <Image
                 src="/imagens/Trello.svg"
-                alt="figma"
+                alt="trello"
                 width={60}
                 height={115}
               />
@@ -106,12 +106,13 @@ export default function Home() {
             <div className="clickup">
             <Image
               src="/imagens/Clickup.svg"
-              alt="figma"
+              alt="clickup"
               width={60}
               height={115}
             />
             <p>ClickUp</p>
             </div>
+        
           </div>
       </section>
 

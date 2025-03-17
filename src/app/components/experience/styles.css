@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 0px;
+    
   }
   
   .timeline-item {
@@ -18,6 +19,12 @@
     color: #344054;
     padding-left: 30px;
   }
+
+  
+  .right {
+  text-align: left; /* Alinhar texto à esquerda */
+    padding-left: -20px; /* Adicionar espaçamento à esquerda */
+}
 
   .left h3 {
     font-size: 30px;
@@ -64,14 +71,13 @@
   
   .right h3 {
     font-size: 30px;
-    margin: 1px;
     color: #49494a;
   }
   
   .right p {
     font-size: 1rem;
     color: #98a2b3;
-    padding-left: 37px;
-    padding-top: -10px;
+    padding-left: 1px;
+    margin-right: 40px;  
   }
   

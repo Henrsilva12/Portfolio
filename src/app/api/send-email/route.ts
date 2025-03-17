@@ -9,22 +9,24 @@ export async function POST(req: Request) {
   if (!name || !email || !message) {
     return NextResponse.json({ error: "Todos os campos são obrigatórios!" }, { status: 400 });
   }
-
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER, // Acessando o e-mail do .env
+        pass: process.env.EMAIL_PASSWORD, // Acessando a senha do .env
+      },
+      tls: {
+        rejectUnauthorized: false, // Ignora a verificação do certificado
+      },
+    });
 
   try {
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: "henrsilvasantos@gmail.com",
-      subject: `Nova mensagem de ${name}`,
-      text: message,
-      replyTo: email,
+      from: `"${name}" <${email}>`, // Remetente
+      to: "henrsilvasantos@gmail.com", // Destinatário
+      subject: `Nova mensagem de ${name}`, // Assunto
+      text: message, // Corpo do e-mail em texto simples
+      replyTo: email, // Endereço de resposta
     });
 
     return NextResponse.json({ message: "Email enviado com sucesso!" }, { status: 200 });
