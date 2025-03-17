@@ -26,7 +26,6 @@ body {
   padding: 0;
 }
 
-
 .header-section {
   display: flex;
   flex-wrap: wrap;
@@ -34,9 +33,59 @@ body {
   gap: 20px; /* Espaçamento entre a foto e os títulos */
 }
 
-.titles-photo{
+.titles-photo {
   display: flex;
-  gap: 300px;
+  gap: 200px; 
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .titles-photo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduzido o espaçamento entre títulos e foto */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
+  .titles h1, .titles h2, .titles h3, .titles h4 {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .titles h2 {
+    padding-left: 0;
+  }
+
+  .titles h3, .titles h4 {
+    font-size: 60px; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  .photo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .photo img {
+    width: 60%; /* Reduz o tamanho da foto para telas menores */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .titles h3, .titles h4 {
+    font-size: 40px; /* Reduz ainda mais o tamanho da fonte para smartphones */
+  }
+
+  .photo img {
+    width: 80%; /* Ajusta o tamanho da foto para smartphones */
+  }
 }
 
 .titles h1 {
@@ -134,7 +183,15 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 850px;
+  height: auto;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .section-projects {
+    height: auto;
+    padding: 20px 10px;
+  }
 }
 
 .section-projects p{
@@ -181,12 +238,19 @@ p {
     padding-left: 0;
   }
 
-  .section-contact{
+.section-contact{
     background-color: #F6FCFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px 0;
+  }
+
+  @media (max-width: 768px) {
+    .section-contact {
+      padding: 20px 10px;
+    }
   }
 
   .section-contact h1{
@@ -208,3 +272,5 @@ p {
     padding: 1rem;
     margin-bottom: 50px;
   }
+
+  
