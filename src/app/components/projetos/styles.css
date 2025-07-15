@@ -1,60 +1,69 @@
 .section_projects {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
+  z-index: 0;
+}
+
+.corousel-item {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-color: #B8E7FB;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-5px);
 }
 
 .slide-item{
-  height: 400px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
-.slide-content{
-  position: relative;
-  height: 500px;
-  width: 500px;
-  background-color: #B8E7FB;
-  border-radius: 10px;
-  padding-top: 15px;
+.text-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.slide-info{
+.carousel-caption {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   right: 0;
-  color: black;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  color: white;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
-.slide-info h2{
-  display: flex;
-  margin: 0 -50px 0 ;
+.carousel-caption:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption h5 {
   font-size: 1.5rem;
-  color: #0E6BA8;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
-.slide-info p{
-  margin: -10px 0 0;
+.carousel-caption h5 {
+  transform: rotateY(-3px);
+}
+
+.carousel-caption p {
   font-size: 1rem;
+  margin-bottom: 0;
 }
 
-.doe-slide .slide-content {
+.doe-slide .corousel-item{
   border: 10px solid #B8E7FB;
-  width: 600px;
-  height: 490px;
-}
-
-.doe-slide .slide-info {
-  text-align: center;
-  padding-left: 40px;
-}
-
-.swiper-pagination {
-  position: absolute;
-  bottom: -70px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .custom-swiper .swiper-pagination {
@@ -65,11 +74,25 @@
   text-align: center;
 }
 
-.doe-slide ~ .swiper-pagination {
-  bottom: 0; /* ou ajuste conforme a necessidade */
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: #0E6BA8;
 }
 
-a {
-  text-decoration: none;
-  color: #0E6BA8; /* Mesma cor do título */
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 400px;
+  }
+
+  .carousel-caption {
+    padding: 10px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
 }

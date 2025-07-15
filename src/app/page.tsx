@@ -1,7 +1,6 @@
 
 import React from "react";
 import Contact from "./components/contact";
-import Timeline from "./components/experience";
 import Navbar from "./components/navbar";
 import ProfileImage from "./components/profile";
 import Footer from "./components/footer";
@@ -15,7 +14,6 @@ export default function Home() {
     <div className="container">
       <Navbar />
 
-      {/* Seção Home */}
       <section id="home" className="header-section">
         <div className="titles-photo">
           <div className="titles">
@@ -36,25 +34,15 @@ export default function Home() {
 
         <div className="description">
           <p>
-            Profissional com 2 anos de experiência em gestão de projetos ágeis,
-            atuando <br /> como Scrum Master e Product Owner. Especialista em
-            liderar times internacionais,
-            <br />
-            criar protótipos UI/UX no Figma e impulsionar resultados estratégicos
-            com Scrum e Kanban.
+            Profissional com 2 anos de experiência em UI/UX Design, Front-end e Gestão de Projetos Ágeis.
+            <br />Especialista em liderar times internacionais, criar protótipos UI/UX no Figma e 
+            impulsionar resultados estratégicos com Scrum e Kanban.
           </p>
       </div>
     </section>
 
-      {/* Seção Experiências */}
-      <section id="experiencias" className="section-experience">
-          <h1>Minhas Experiências</h1>
-          <Timeline />
-      </section>
-
-        {/* Seção Projetos */}
         <section id="projetos" className="section-projects">
-          <h1>Meus Projetos</h1>
+          <h1>Projetos</h1>
           <p>
             Exploro criatividade e funcionalidade em cada projeto que desenvolvo.
             Aqui estão algumas <br /> iniciativas que destacam minha experiência em UI/UX

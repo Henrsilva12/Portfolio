@@ -2,9 +2,12 @@
     background-color: #00072d; /* Cor do fundo */
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 40px;
   }
   
   .navbar ul {
@@ -16,14 +19,14 @@
   }
   
   .navbar li {
-    font-size: 1rem;
+    font-size: 1.0rem;
   }
   
   .navbar button {
     background: none;
     border: none;
     color: #fff; /* Cor do texto */
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: color 0.3s;
   }

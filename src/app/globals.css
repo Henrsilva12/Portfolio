@@ -149,10 +149,13 @@ p {
 }
 
 .description {
-  margin-top: 0;
-  text-align: center;
+  margin: 0 auto;
   max-width: 1200px;
   line-height: 1.5;
+}
+
+.description p{
+  text-align: center;
 }
 
 .section-experience h1{
