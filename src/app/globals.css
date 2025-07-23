@@ -30,13 +30,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-top: 40px;
-  gap: 20px; /* Espaçamento entre a foto e os títulos */
+  gap: 20px;
+}
+
+.photo {
+  padding-top: 30px;
+  margin-right: 240px;
 }
 
 .titles-photo {
   display: flex;
-  gap: 200px; 
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 0 50px;
 }
 
 @media (max-width: 768px) {
@@ -48,23 +55,24 @@ body {
   }
 
   .titles-photo {
-    display: flex;
     flex-direction: column;
-    gap: 20px; /* Reduzido o espaçamento entre títulos e foto */
-    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 0 20px;
+    gap: 20px;
   }
 
-  .titles h1, .titles h2, .titles h3, .titles h4 {
+  .titles {
+    max-width: 100%;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .titles h1, .titles h2 {
     padding-left: 0;
     text-align: center;
   }
 
   .titles h2 {
     padding-left: 0;
-  }
-
-  .titles h3, .titles h4 {
-    font-size: 60px; /* Reduz o tamanho da fonte para telas menores */
   }
 
   .photo {
@@ -79,45 +87,24 @@ body {
 }
 
 @media (max-width: 480px) {
-  .titles h3, .titles h4 {
-    font-size: 40px; /* Reduz ainda mais o tamanho da fonte para smartphones */
-  }
-
   .photo img {
     width: 80%; /* Ajusta o tamanho da foto para smartphones */
   }
 }
 
 .titles h1 {
-  font-size: 30px;
+  font-size: 80px;
   font-weight: bold;
-  padding-top: 20px;
-  padding-left: 20px;
-  margin-bottom: 5px;
   color: #000000;
 }
 
-h2 {
-  font-size: 40px;
-  font-weight: bold;
-  color: #00194d;
-  margin: 0;
-  padding: 5px 0 0 270px; /* Aproxima do h3 */
-}
-
-h3 {
+.titles h2 {
   font-size: 80px;
   font-weight: bold;
-  margin: 0;
-  padding: 10px 0 0 60px; /* Remove o espaçamento no topo */
+  color: #000000;
+  margin-top: -70px;
 }
 
-h4 {
-  font-size: 80px;
-  font-weight: bold;
-  padding-left: 250px;
-  margin-top: 0px;
-}
 
 p {
   font-size: 22px;
@@ -145,17 +132,10 @@ p {
 }
 
 .titles {
-  text-align: start;
-}
-
-.description {
-  margin: 0 auto;
-  max-width: 1200px;
-  line-height: 1.5;
-}
-
-.description p{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
 }
 
 .section-experience h1{
@@ -274,6 +254,24 @@ p {
     margin-left: -700px;
     padding: 1rem;
     margin-bottom: 50px;
+  }
+
+  .skills-typewriter {
+    margin-top: -50px;
+  }
+
+  .typewriter-text {
+    margin: 10px;
+  }
+
+  .typewriter-span {
+    font-weight: 500;
+    color: rgb(8, 0, 255);
+    font-size: 30px;
+  }
+
+  .cursor {
+    background: ;
   }
 
   

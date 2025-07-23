@@ -1,4 +1,4 @@
-
+"use client"
 import React from "react";
 import Contact from "./components/contact";
 import Navbar from "./components/navbar";
@@ -7,9 +7,18 @@ import Footer from "./components/footer";
 import Image from "next/image";
 import Projects from "./components/projetos";
 import ScrollButton from "./components/button";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 
 export default function Home() {
+
+  const [text] = useTypewriter({
+    words: ["UI/UX Designer", "Developer Front-end", "Gestão de Projetos Ágeis"],
+    loop: true,
+    typeSpeed: 120,
+    deleteSpeed: 80,
+  });
+
   return (
     <div className="container">
       <Navbar />
@@ -17,10 +26,18 @@ export default function Home() {
       <section id="home" className="header-section">
         <div className="titles-photo">
           <div className="titles">
-            <h1>Olá! Me chamo</h1>
-            <h2>Henrique Santos</h2>
-            <h3>UI & UX</h3>
-            <h4>Designer</h4>
+            <h1>Henrique</h1>
+            <h2>Santos</h2>
+            <div className="skills-typewriter">
+              <h3 className="typewriter-text">
+                <span className="typewriter-span">
+                  {text}
+                </span>
+                <span className="cursor">
+                  <Cursor />
+                </span>
+              </h3>
+            </div>
           </div>
 
           <div className="photo">
@@ -31,14 +48,6 @@ export default function Home() {
               height={500} githubUrl="https://github.com/Henrsilva12" linkedinUrl="https://www.linkedin.com/in/henrique-santos-4b7901287"/>
           </div>
         </div>
-
-        <div className="description">
-          <p>
-            Profissional com 2 anos de experiência em UI/UX Design, Front-end e Gestão de Projetos Ágeis.
-            <br />Especialista em liderar times internacionais, criar protótipos UI/UX no Figma e 
-            impulsionar resultados estratégicos com Scrum e Kanban.
-          </p>
-      </div>
     </section>
 
         <section id="projetos" className="section-projects">
