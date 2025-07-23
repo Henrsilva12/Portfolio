@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import PropTypes from "prop-types";
 import "./styles.css";
 
@@ -16,10 +15,9 @@ const ProfileImage: React.FC<ProfileImageProps> = ({
   alt,
   width,
   height,
-  githubUrl,
-  linkedinUrl,
 }) => {
   return (
+    
     <div className="profileWrapper">
       <div className="profileImageContainer">
         <Image
@@ -30,26 +28,8 @@ const ProfileImage: React.FC<ProfileImageProps> = ({
         />
       </div>
 
-      <div className="socialIcons">
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon"
-          aria-label="GitHub"
-        >
-          <FaGithub size={30} />
-        </a>
-        <a
-          href={linkedinUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin size={30} />
-        </a>
-      </div>
+      <div className="efeitos"></div>
+
     </div>
   );
 };

@@ -10,6 +10,7 @@
   width: 100%;
   max-width: 400px;
   height: auto;
+  border: 2px solid var(--vidro);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -20,7 +21,10 @@
     #003ebb
   ); /* Gradiente de fundo */
   padding: 3px;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  animation: flutuar 5s ease-in-out infinite;
 }
+
 
 .profileImageContainer img {
   width: 100%;
@@ -30,35 +34,10 @@
   background-color: white; /* Previne falhas no carregamento da imagem */
 }
 
-.socialIcons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.icon {
-  color: #003ebb;
-  transition: color 0.3s;
-  text-decoration: none;
-  font-size: 30px;
-}
-
-.icon:hover {
-  color: #63b3ed;
-}
 
 @media (max-width: 768px) {
   .profileImageContainer {
     max-width: 300px;
-  }
-
-  .icon {
-    font-size: 25px;
-  }
-
-  .socialIcons {
-    gap: 15px; /* Reduz o espaçamento entre os ícones */
   }
 }
 
@@ -66,12 +45,29 @@
   .profileImageContainer {
     max-width: 200px;
   }
+}
 
-  .icon {
-    font-size: 20px;
+.efeitos {
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background:
+  radial-gradient(circle at 10% 20%, var(--secondary) 0%, transparent 20%),
+  radial-gradient(circle at 90% 80%, var(--primary) 0%, transparent 20%),
+  var(--vidro);
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
   }
 
-  .socialIcons {
-    gap: 10px; /* Reduz ainda mais o espaçamento entre os ícones */
+  50% {
+    transform: translateY(-15px);
   }
+
 }
