@@ -1,12 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  --vidro: rgba(255, 255, 255, 0.1);
+  --gradienteLink: linear-gradient(90deg, #0033FF, #0600AB, #00033D);
+  --gradienteBackground: linear-gradient(135deg, #7226FF, #160078, #010040);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
     --foreground: #000000;
+    --vidro: rgba(255, 255, 255, 0.1);
+    --gradienteLink: linear-gradient(90deg, #0033FF, #0600AB, #00033D);
+    --gradienteBackground: linear-gradient(135deg, #7226FF, #160078, #010040);  
   }
 }
 

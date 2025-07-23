@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #00072d; /* Cor do fundo */
+    background: rgb(2, 31, 77); 
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -9,53 +9,51 @@
     width: 100%;
     height: 40px;
   }
-  
-  .navbar ul {
+
+  .nav-links {
     display: flex;
     gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
-  .navbar li {
-    font-size: 1.0rem;
+
+  .nav-item {
+    position: relative;
   }
   
-  .navbar button {
+  .nav-button {
     background: none;
     border: none;
-    color: #fff; /* Cor do texto */
+    color: #fff7f7;
     font-size: 1.2rem;
+    padding: 0.5rem 0;
+    position: relative;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
   }
-  
-  .navbar button:hover {
-    color: #63b3ed; /* Cor ao passar o mouse */
+
+  .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    border: 1px solid var(--gradienteLink);
+    border-radius: 30px;
+    background: var(--gradienteLink);
+    transition: width 0.3s ease;
   }
-  
-  .email {
-    display: block;
-    margin-left: -830px;
-    padding-left: 100px;
+
+  .nav-button:hover .underline {
+    width: 100%;
   }
-  
-  @media (max-width: 768px) {
-    .email {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
+
+  .nav-button.active .underline {
+    width: 100%;
+    background: var(--gradienteLink);
   }
-  .email-link {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
-    transition: color 0.3s;
+
+  .nav-button:hover {
+    color: #a5d8ff;
   }
-  
-  .email-link:hover {
-    color: #63b3ed;
-  }
-  
