@@ -1,7 +1,6 @@
 .section_form {
   display: flex;
   justify-content:space-between ;
-  background-color: #F6FCFF;
   padding: 24px;
   max-width: 1200px;
   margin: 0 auto;

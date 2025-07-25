@@ -8,8 +8,8 @@ const Navbar: React.FC = () => {
 
   const sections = [
     { id: "home", label: "Início" },
+    { id: "sobre", label: "Sobre" },
     { id: "projetos", label: "Projetos" },
-    { id: "skills", label: "Skills" },
     { id: "contato", label: "Contato" },
   ];
 

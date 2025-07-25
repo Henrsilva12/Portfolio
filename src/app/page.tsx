@@ -4,7 +4,6 @@ import Contact from "./components/contact";
 import Navbar from "./components/navbar";
 import ProfileImage from "./components/profile";
 import Footer from "./components/footer";
-import Image from "next/image";
 import Projects from "./components/projetos";
 import ScrollButton from "./components/button";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -16,7 +15,7 @@ export default function Home() {
     words: ["UI/UX Designer", "Developer Front-end", "Gestão de Projetos Ágeis"],
     loop: true,
     typeSpeed: 120,
-    deleteSpeed: 80,
+    deleteSpeed: 100,
   });
 
   return (
@@ -50,6 +49,17 @@ export default function Home() {
         </div>
     </section>
 
+      {/* Seção Sobre */}
+      <section id="sobre" className="section-about">
+        <h1>Sobre Mim</h1>
+        <p>
+          Sou um profissional apaixonado por design e desenvolvimento, com experiência em
+          criar soluções inovadoras e centradas no usuário. Minha abordagem combina
+          estética e funcionalidade, garantindo que cada projeto atenda às necessidades
+          do cliente e proporcione uma experiência excepcional ao usuário.
+        </p>
+      </section>
+
         <section id="projetos" className="section-projects">
           <h1>Projetos</h1>
           <p>
@@ -61,59 +71,6 @@ export default function Home() {
           <Projects />
       </section>
 
-      {/* Seção Skills */}
-      <section id="skills" className="section-skills">
-          <h1>Minhas Skills</h1>
-          <p>
-          Transformo ideias em interfaces incríveis com Figma, organizo projetos
-          com <br /> ClickUp e Trello, e adiciono valor ao front-end com habilidades em
-          React.
-          </p>
-            <div className="skills-container">
-              <div className="figma">
-              <Image
-              src="/imagens/figma.svg"
-              alt="figma"
-              width={60}
-              height={115}
-            />
-            <p>Figma</p>
-              </div>
-
-              <div className="react">
-                <Image
-                src="/imagens/react.svg"
-                alt="react"
-                width={60}
-                height={115}
-              />
-              <p>React</p>
-              </div>
-              
-            <div className="trello">
-              <Image
-                src="/imagens/Trello.svg"
-                alt="trello"
-                width={60}
-                height={115}
-              />
-              <p>Trello</p>
-            </div>
-
-            <div className="clickup">
-            <Image
-              src="/imagens/clickup.svg"
-              alt="clickup"
-              width={60}
-              height={115}
-            />
-            <p>ClickUp</p>
-            </div>
-        
-          </div>
-      </section>
-
-      {/* Seção Contato */}
       <section id="contato" className="section-contact">
           <h1>Contate me</h1>
           <p>
@@ -123,12 +80,10 @@ export default function Home() {
             <Contact />
       </section>
 
-      {/* Footer */}
       <div className="footer">
         <Footer />
       </div>
 
-      {/* Scroll Button */}
       <ScrollButton />
     </div>
   );

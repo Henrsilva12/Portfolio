@@ -14,11 +14,15 @@ import 'swiper/css/scrollbar';
 const Projects = () => {
     const [slidePerView, setSlidePerView] = useState(2)
     const slide = [
-        { id: '1', image: '/imagens/EatEating.png', url: 'https://www.figma.com/design/7MhynJQsYgvsyAAF9OrSMJ/EatEating?node-id=238-1718&p=f&t=TvxhLmZGvjGeKWoF-0', title: 'EatEating', description:'Sistema para controlar entradas em refeitórios universitários'},
-        { id: '2', image: '/imagens/Enviei.png', url: 'https://www.figma.com/design/4vsABWc6YzGThVfMBhRK9Z/EmailService?node-id=1173-919&p=f&t=TvxhLmZGvjGeKWoF-0', title: 'E-mail Service', description: 'Aplicação para envio de e-mails transacionais'},
-        { id: '3', image: '/imagens/Enviei.png', url: 'https://www.figma.com/design/4vsABWc6YzGThVfMBhRK9Z/EmailService?node-id=1173-919&p=f&t=TvxhLmZGvjGeKWoF-0', title: 'E-mail Service', description: 'Aplicação para envio de e-mails transacionais'},
-        { id: '4', image: '/imagens/Enviei.png', url: 'https://www.figma.com/design/4vsABWc6YzGThVfMBhRK9Z/EmailService?node-id=1173-919&p=f&t=TvxhLmZGvjGeKWoF-0', title: 'E-mail Service', description: 'Aplicação para envio de e-mails transacionais'},
-        
+        { id: '1', image: '/imagens/EatEating.png', title: 'EatEating', description:'Sistema para controlar entradas em refeitórios universitários'},
+        { id: '2', image: '/imagens/Enviei.png', title: 'Portal de BSI', description: 'Portal educacional do curso superior do IF Baiano Campus Itapetinga'},
+        { id: '3', image: '/imagens/Enviei.png', title: 'ReciclaITA', description: 'Sistema para gerenciamento de resíduos sólidos'},
+        { id: '4', image: '/imagens/Enviei.png', title: 'Geni', description: 'Projetos como designer gráficos para um projeto do IF Baiano Campus Itapetinga'},
+        { id: '5', image: '/imagens/Enviei.png', title: 'Doe+', description: 'Sistema de doações de alimentos para pessoas carentes'},
+        { id: '6', image: '/imagens/Enviei.png', title: 'LabsIf', description: 'Site da empresa LabsIf'},
+        { id: '7', image: '/imagens/Enviei.png', title: 'Zelo+', description: 'Aplicativo para auxiliar pessoas idosas em atividades do dia a dia'},
+        { id: '8', image: '/imagens/Enviei.png', title: 'KeySafe', description: 'Aplicativo para gerenciamento de senhas'},
+        { id: '9', image: '/imagens/Enviei.png', title: 'Enviei', description: 'Sistema de envio de e-mails em massa'},
     ]
 
     useEffect(() => {
@@ -47,7 +51,7 @@ const Projects = () => {
                     pagination={{ clickable: true }}
                     navigation
                     className="custom-swiper"
-                    spaceBetween={40}
+                    spaceBetween={20}
                 >
                     {slide.map( (item) => (
                         <SwiperSlide key={item.id} className={item.title === 'Doe+' ? 'doe-slide' : '' }>

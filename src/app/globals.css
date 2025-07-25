@@ -40,7 +40,7 @@ body {
 }
 
 .photo {
-  padding-top: 30px;
+  padding: 70px 0;
   margin-right: 240px;
 }
 
@@ -108,7 +108,7 @@ body {
   font-size: 80px;
   font-weight: bold;
   color: #000000;
-  margin-top: -70px;
+  margin-top: -90px;
 }
 
 
@@ -144,37 +144,49 @@ p {
   max-width: 50%;
 }
 
-.section-experience h1{
+.section-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.section-about h1 {
   font-size: 50px;
   font-weight: bold;
-  padding-top: 40px;
   padding-bottom: 20px;
-  text-align: center;
+  justify-content: center;
   color: #3e89b9;
 }
 
-.section-experience {
-  margin-left: -50px;
+.section-about p {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: -20px;
+  width: 80%;
+}
+@media (max-width: 768px) {
+  .section-about {
+    padding: 20px 10px;
+  }
+}
+.section-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
 }
 
 .section-projects h1{
   font-size: 50px;
   font-weight: bold;
-  padding-top: 10px;
   padding-bottom: 0;
   justify-content: center;
   color: #3e89b9;
 }
 
-.section-projects {
-  display: flex;
-  background-color: #F6FCFF;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: auto;
-  padding: 20px 0;
-}
 
 @media (max-width: 768px) {
   .section-projects {
@@ -185,50 +197,12 @@ p {
 
 .section-projects p{
   text-align: center;
-  padding-top: -40px;
-}
-
-.fundo-section {
-  background-color: #F6FCFF;
-}
-
-.section-skills h1{
-  font-size: 50px;
-  font-weight: bold;
-  padding-top: 10px;
-  justify-content: center;
-  color: #3e89b9;
-}
-
-.section-skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: -20px;
   text-align: center;
-}
-
-.section-skills p{
-  text-align: center;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap; /* Permite quebra de linha se necessário */
-  margin-top: 45px;
   padding-bottom: 50px;
 }
 
-.skills-container p {
-    font-size: 18px;
-    margin: 0;
-    color: #3e89b9;
-    padding-left: 0;
-  }
-
 .section-contact{
-    background-color: #F6FCFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,13 +220,15 @@ p {
     font-size: 50px;
     font-weight: bold;
     padding-top: 0;
-    padding-bottom: 20px;
     justify-content: center;
     color: #3e89b9;
   }
 
   .section-contact p{
     text-align: center;
+    margin-top: -20px;
+    text-align: center;
+    padding-bottom: 50px;
   }
 
   .inputs {
@@ -277,7 +253,8 @@ p {
   }
 
   .cursor {
-    background: ;
+    font-size: 30px;
+    color: rgb(8, 0, 255);
   }
 
   
