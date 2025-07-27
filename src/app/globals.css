@@ -41,7 +41,7 @@ body {
 
 .photo {
   padding: 70px 0;
-  margin-right: 240px;
+  margin-right: 100px;
 }
 
 .titles-photo {
@@ -59,7 +59,7 @@ body {
     text-align: center;
     padding-top: 20px;
   }
-
+  
   .titles-photo {
     flex-direction: column;
     padding: 0 20px;
@@ -80,7 +80,7 @@ body {
   .titles h2 {
     padding-left: 0;
   }
-
+  
   .photo {
     width: 100%;
     text-align: center;
@@ -99,18 +99,35 @@ body {
 }
 
 .titles h1 {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: bold;
-  color: #000000;
+  color: #00005b;
 }
 
 .titles h2 {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
-  color: #000000;
-  margin-top: -90px;
+  color: #0416db;
+  margin-top: -60px;
 }
-
+  .skills-typewriter {
+    margin-top: -60px;
+  }
+  
+  .typewriter-text {
+    margin: 10px;
+  }
+  
+  .typewriter-span {
+    font-weight: 500;
+    color: #0416db;
+    font-size: 30px;
+  }
+  
+  .cursor {
+    font-size: 30px;
+    color: rgb(8, 0, 255);
+  }
 
 p {
   font-size: 22px;
@@ -118,6 +135,7 @@ p {
   text-align: justify;
   padding-top: 10px;
   line-height: 1.5;
+  color: #050047;
 }
 
 @media (max-width: 768px) {
@@ -149,23 +167,36 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .section-about h1 {
   font-size: 50px;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   justify-content: center;
-  color: #3e89b9;
+  color: #1102db;
+}
+
+.background-about {
+  width: 100%;
+  height: 200px;
+  background-color: #030187dd;
+  position: relative;
+  border: 1px solid none;
+  border-radius: 15px;
 }
 
 .section-about p {
-  text-align: center;
-  padding: 0 20px;
+  padding: 30px 20px;
   margin-top: -20px;
   width: 80%;
+  height: 200px;
+  color: white;
+  text-align: center;
+  font-size: 25px;
 }
+
 @media (max-width: 768px) {
   .section-about {
     padding: 20px 10px;
@@ -177,6 +208,7 @@ p {
   align-items: center;
   text-align: center;
   height: auto;
+  padding-top: 50px;
 }
 
 .section-projects h1{
@@ -184,7 +216,7 @@ p {
   font-weight: bold;
   padding-bottom: 0;
   justify-content: center;
-  color: #3e89b9;
+  color: #1102db;
 }
 
 
@@ -193,13 +225,6 @@ p {
     height: auto;
     padding: 20px 10px;
   }
-}
-
-.section-projects p{
-  text-align: center;
-  margin-top: -20px;
-  text-align: center;
-  padding-bottom: 50px;
 }
 
 .section-contact{
@@ -221,14 +246,7 @@ p {
     font-weight: bold;
     padding-top: 0;
     justify-content: center;
-    color: #3e89b9;
-  }
-
-  .section-contact p{
-    text-align: center;
-    margin-top: -20px;
-    text-align: center;
-    padding-bottom: 50px;
+    color: #1102db;
   }
 
   .inputs {
@@ -238,23 +256,5 @@ p {
     margin-bottom: 50px;
   }
 
-  .skills-typewriter {
-    margin-top: -50px;
-  }
-
-  .typewriter-text {
-    margin: 10px;
-  }
-
-  .typewriter-span {
-    font-weight: 500;
-    color: rgb(8, 0, 255);
-    font-size: 30px;
-  }
-
-  .cursor {
-    font-size: 30px;
-    color: rgb(8, 0, 255);
-  }
 
   
